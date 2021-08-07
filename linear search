@@ -1,0 +1,92 @@
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+
+
+const int arr_size=50;
+class linear_search
+{
+private:
+int n, int arr[arr_size], int key;
+
+// n: size of the array ; arr: array the user will input ; key: the element user wants to search 
+    
+public:
+    linear_search(int n1,int k1); // we are defining constructor of this class
+    ~linear_search();
+
+    void Print_data(); // This function prints the array
+    void Get_data();  // This function takes the array from user
+    void search_data(); // This function performs linear search
+};
+
+void linear_search::Print_data()
+{
+   for (int i=0;i<=n;i++)
+   {
+       cout<<" "<<arr[i]<<" "<<endl;
+   }
+   cout<<endl;  
+}
+
+void linear_search::Get_data()
+{
+    cout<<"enter the size of your array :: ";
+    cin>>n;
+
+    for(int i=0;i<n;i++)
+    {
+       cout<<"Enter the element of index number ::" <<i<<endl;
+       cin>>arr[i];
+    }
+
+
+
+}
+
+void linear_search::search_data()
+{
+   for(int i=0; i<=n ;i++)
+   {
+       if(arr[i]==key)
+       {
+           cout<<"Element is found at index number ::"<<i<<endl;
+       }
+       else
+       {
+           cout<<"Element not found!!";
+       }
+   }
+}
+int main()
+{
+    int n1; int k1;
+    cout<<"enter the size of your array :: ";
+    cin>>n1;
+
+    for(int i=0;i<n1;i++)
+    {
+       cout<<"Enter the element of index number ::" <<i<<endl;
+    }
+
+    cout<<"Enter the element you want to search ::";
+    cin>>k1;
+
+    if(n1<=50)
+    {
+        object.Get_data();
+
+        cout<<"Your array is ::"<<endl;
+        object.Print_data();
+
+        object.Search_data();
+        return 0;
+    }
+
+    else
+    {
+        cout<<"You have entered something invalid.Please try again !!";
+
+        return 0;
+    }
+}
